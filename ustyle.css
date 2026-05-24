@@ -8,10 +8,11 @@ body{
 .navbar{
     padding: 10px;
     display: flex;
-    justify-content: space-between;
-    border-bottom: solid black 1px;
+    justify-content: space-around;
     gap: 10px;
-    align-items: center;
+    border-bottom: solid black 1px;
+    gap: 1px;
+    align-items:center;
     position:sticky;
     top:0;
     z-index: 1;
@@ -25,7 +26,7 @@ body{
     border-radius: 30px;
     width: 65%;
     display: flex;
-    gap:10px;
+    gap:5px;
 }
 .navbar__s2 input{
     border: none;
@@ -38,7 +39,10 @@ body{
 }
 .navbar__s3{
     display:flex;
-    gap:10px;
+    gap:5px;
+}
+.navbar__s4{
+    display: none;
 }
 .myLearning{
     position:relative;
@@ -117,6 +121,9 @@ body{
 }
 .course-card{
     width:280px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 .course-card img{
     width:100%;
@@ -164,4 +171,23 @@ body{
     justify-content: space-between;
     margin: 20px;
     align-items: center;
+}
+@media screen and (max-width: 800px){
+    body{
+        font-size: 10px;
+    }
+}
+    @media screen and (max-width: 500px){
+      .course-card{
+        flex-basis: 40%;
+      }
+      .categories{
+        display: none;
+      }
+      .navbar__s2,.navbar__s3{
+        display: none;
+      }
+      .navbar__s4{
+        display: block;
+      }
 }
